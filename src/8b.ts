@@ -1,4 +1,6 @@
-export const unit8b = [
+import type { Question } from "./IQuestion";
+
+export const unit8b: Question[] = [
   { word: "accurate", type: "adj", definition: "Correct and true in every detail.", example: "The police are trying to obtain a more accurate picture of crime levels." },
   { word: "apologize", type: "v", definition: "To tell someone that you are sorry that you have done something wrong.", example: "I think you should apologize to your brother for what you did to his car." },
   { word: "apology", type: "n", definition: "A word or statement saying sorry for something that has been done wrong or that causes a problem.", example: "We should like to offer our apologies for the delay to your flight today." },

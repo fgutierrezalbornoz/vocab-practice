@@ -1,4 +1,6 @@
-export const unit7a = [
+import type { Question } from "./IQuestion";
+
+export const unit7a: Question[] = [
   {
     word: "argue",
     type: "v",
