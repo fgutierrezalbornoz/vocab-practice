@@ -147,7 +147,7 @@ export function QuestionComponent() {
           </select>
         </section>
         {response && <header style={{ color: isCorrect ? "green" : "red", fontSize: '24px' }}>{response}</header>}
-        <section className="help-section">{!showClue ? "Show clue" : "Hide clue"} <input type="checkbox" onChange={() => setShowClue(!showClue)} disabled={isCorrect} /></section>
+        <section className="help-section">{!showClue ? "Show clue" : "Hide clue"} <input type="checkbox" checked={showClue} onChange={() => setShowClue(!showClue)} disabled={isCorrect} /></section>
 
         <section className="question-section">
           Definition: "{randomQuestion.definition}"
