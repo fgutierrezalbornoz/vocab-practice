@@ -7,6 +7,7 @@ import { useWindowSize } from "react-use";
 import ReactConfetti from "react-confetti";
 import { unit8b } from "./8b";
 import { unit10b } from "./10b";
+import { Clue } from "./components/Clue";
 
 
 // const units = [{ name: "5A", array: unit5a }, { name: "6B", array: unit6b }, { name: "7A", array: unit7a }]
@@ -152,9 +153,7 @@ export function QuestionComponent() {
         <section className="question-section">
           Definition: "{randomQuestion.definition}"
         </section>
-        {showClue && <section className="clue">
-          Has {randomQuestion.word.length} letters.
-        </section>}
+        {showClue && <Clue question={randomQuestion} />}
         {isCorrect && <p className="example">Example: "{randomQuestion.example}"</p>}
         <form className="form-container" onSubmit={handleSubmit}>
           <input value={answer} onChange={handleChange} type="text" disabled={isCorrect}></input>
