@@ -161,7 +161,7 @@ export function QuestionComponent() {
         </form>
         <section className="md:flex gap-4 flex-col">
           <button onClick={resetAnswers}>Reset Answers</button>
-          <button onClick={chooseWord} className="change-button">Change word</button>
+          <button onClick={chooseWord} className="change-button" autoFocus>Change word</button>
         </section>
       </article>
     </>
