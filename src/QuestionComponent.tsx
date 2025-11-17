@@ -97,7 +97,7 @@ export function QuestionComponent() {
     } else if (value === "8B") {
       setUnit(unit8b);
     } else if (value === "10B") {
-      setUnit(unit8b);
+      setUnit(unit10b);
     }
     setIsCorrect(false);
     setAnswer("");
