@@ -13,6 +13,8 @@ export function Clue({ question }: Props) {
                     return <span key={`char-${index}`}>'</span>;
                 if (l === " ")
                     return <span key={`char-${index}`}>&nbsp;&nbsp;&nbsp;</span>;
+                if (l === "-")
+                    return <span key={`char-${index}`}>-</span>;
                 if (isFirst || isLast) return l.toUpperCase() + " ";
                 if (/[a-zA-Z]/.test(l)) return "_ ";
             })}
