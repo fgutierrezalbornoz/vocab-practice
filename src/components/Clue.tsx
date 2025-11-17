@@ -9,12 +9,10 @@ export function Clue({ question }: Props) {
             {question.word.split("").map((l, index) => {
                 const isFirst = index === 0;
                 const isLast = index === question.word.length - 1;
-                if (l === "'")
-                    return <span key={`char-${index}`}>'</span>;
                 if (l === " ")
                     return <span key={`char-${index}`}>&nbsp;&nbsp;&nbsp;</span>;
-                if (l === "-")
-                    return <span key={`char-${index}`}>-</span>;
+                if (["(", ")", "-", "'"].includes(l))
+                    return <span key={`char-${index}`}>{l}</span>;
                 if (isFirst || isLast) return l.toUpperCase() + " ";
                 if (/[a-zA-Z]/.test(l)) return "_ ";
             })}
