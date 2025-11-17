@@ -26,6 +26,7 @@ export function QuestionComponent() {
     const lStorage = localStorageString ? JSON.parse(localStorageString) : "";
     delete lStorage[unitSelected];
     localStorage.setItem("answers", JSON.stringify(lStorage));
+    chooseWord();
   }
   const saveInLS = (word: string) => {
     const localStorageString = localStorage.getItem('answers');
